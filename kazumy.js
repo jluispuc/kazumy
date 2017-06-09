@@ -2,26 +2,22 @@ function Kazumy(){
 
 }
 
-Kazumy.prototype.viewText = function (id, data) {
+Kazumy.prototype.textView = function (id, data) {
   $(id).append('<p>'+data+'</p>');
 };
 
 Kazumy.prototype.dataView = function (id, dataJSON) {
   var content = $(id).text();
+  content = content.trim()
   var arrayString = content.split(" ")
 
   arrayString.forEach( function (item, index) {
-    if(item != "" && item != " "){
-      var element = item.substring(1);
-alert(element)
-      //for (var key in dataJSON) {
-        if(element != " " ){
-          remplazo = '%'+element
-          console.log(element)
-          content = content.replace(remplazo, dataJSON[element])
-        }  
-      //}
-    }
+      var element = item.substring(1, item.length-1);
+
+        if(dataJSON[element.toString()] != undefined){
+          remplazo = '['+element+']'
+          content = content.replace(remplazo, dataJSON[element.toString()])
+        }
   });
 
   $(id).text(content);

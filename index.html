@@ -13,7 +13,7 @@
   <body>
     <h1>Pruebas con KazumyJS</h1>
     <div id="display">
-      Hola soy %nombre %apellido
+      Hola soy [nombre] [apellido] y soy [oficio]
     </div>
   </body>
 </html>
@@ -21,11 +21,13 @@
   $(document).ready(function () {
     var kazumy = new Kazumy();
 
-    //kazumy.viewText('#display', 'Hola soy Kazumy, creado por Luis');
-
     kazumy.dataView('#display', {
       nombre : 'Luis',
-      apellido : 'Puc'
+      apellido : 'Puc',
+      oficio : 'Desarrollador'
     })
+
+    kazumy.textView('#display', 'Hola soy Kazumy, creado por Luis');
+
   })
 </script>
