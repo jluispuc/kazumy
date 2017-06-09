@@ -12,12 +12,14 @@ Kazumy.prototype.dataView = function (id, dataJSON) {
   var arrayString = content.split(" ")
 
   arrayString.forEach( function (item, index) {
-      var element = item.substring(1, item.length-1);
+      var cadena = item
+      element = cadena.replace(/[.,;:]/gi, "")
+      element = element.substring(1, element.length-1);
 
-        if(dataJSON[element.toString()] != undefined){
-          remplazo = '['+element+']'
-          content = content.replace(remplazo, dataJSON[element.toString()])
-        }
+      if(dataJSON[element.toString()] != undefined){
+        remplazo = '['+element+']'
+        content = content.replace(remplazo, dataJSON[element.toString()])
+      }
   });
 
   $(id).text(content);

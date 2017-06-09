@@ -13,7 +13,7 @@
   <body>
     <h1>Pruebas con KazumyJS</h1>
     <div id="display">
-      Hola soy [nombre] [apellido] y soy [oficio]
+      Hola soy [nombre]. Soy [oficio] en [lugar_trabajo]
     </div>
   </body>
 </html>
@@ -23,8 +23,8 @@
 
     kazumy.dataView('#display', {
       nombre : 'Luis',
-      apellido : 'Puc',
-      oficio : 'Desarrollador'
+      oficio : 'Desarrollador',
+      lugar_trabajo : 'Grupo Icarus'
     })
 
     kazumy.textView('#display', 'Hola soy Kazumy, creado por Luis');
