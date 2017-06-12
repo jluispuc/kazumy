@@ -13,7 +13,7 @@ Kazumy.prototype.dataView = function (id, arrayData) {
 
   arrayString.forEach( function (item, index) {
       var cadena = item;
-      element = cadena.replace(/[.,;:]/gi, "");
+      element = cadena.replace(/[!¡/()¿?.,;:]/gi, "");
       element = element.substring(1, element.length-1);
 
       if(arrayData[element.toString()] != undefined){
