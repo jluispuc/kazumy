@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous">
-    </script>
-    <script src="/kazumy.js"></script>
-  </head>
-  <body>
-    <h1>Pruebas con KazumyJS</h1>
-    <div id="display">
-      Hola soy [nombre]. Soy [oficio] en [lugar_trabajo], me gusta [gusto]!
-    </div>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+  </script>
+  <script src="/kazumy.js"></script>
+</head>
+
+<body>
+  <h1>Pruebas con KazumyJS</h1>
+  <div id="display">
+    Hola soy [nombre], soy [oficio] en [lugar_trabajo], me gusta ¡[gusto]!
+  </div>
+</body>
+
 </html>
 <script>
-  $(document).ready(function () {
+  $(document).ready(function() {
     var kazumy = new Kazumy();
 
-    kazumy.dataView('#display', {
-      nombre : 'Luis',
-      oficio : 'Desarrollador',
-      lugar_trabajo : 'Grupo Icarus',
-      gusto : 'Programar'
+    kazumy.dataView('#display',
+    {
+      nombre: 'Manuel',
+      oficio: 'Desarrollador',
+      lugar_trabajo: 'Facebook',
+      gusto: 'Diseño gráfico'
     })
 
     kazumy.textView('#display', 'Hola soy Kazumy, creado por Luis');
