@@ -1,18 +1,22 @@
 function Kazumy() {
 
 }
-/*
-id; id del elemento del DOM
-data; texto a mostrar
-@Muestra texto de tag <p> en el elemento indicado mediante el Id.
+/**
+*
+*Muestra texto de tag <p> en el elemento indicado mediante el Id.
+*
+*@id; id del elemento del DOM
+*@data; texto a mostrar
 */
 Kazumy.prototype.textView = function(id, data) {
   $(id).append('<p>' + data + '</p>');
 }
-/*
-id; id del elemento del DOM
-data; Arreglo de datos a mostrar
-@Especie de interpolación de datos en el elemento indicado por el Id.
+/**
+*
+*Especie de interpolación de datos en el elemento indicado por el Id.
+*
+*@id; id del elemento del DOM
+*@data; Arreglo de datos a mostrar
 */
 Kazumy.prototype.dataView = function(id, arrayData) {
   var content = $(id).text();
