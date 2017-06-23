@@ -1,6 +1,4 @@
-function Kazumy() {
-
-}
+function Kazumy() {};
 /**
 *
 *Muestra texto de tag <p> en el elemento indicado mediante el Id.
