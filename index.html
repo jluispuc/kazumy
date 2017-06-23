@@ -14,6 +14,7 @@
   <div id="display">
     Hola soy [nombre], soy [oficio] en [lugar_trabajo], me gusta ¡[gusto]!
   </div>
+  <select-k></select-k>
 </body>
 
 </html>
@@ -30,6 +31,17 @@
     })
 
     kazumy.textView('#display', 'Hola soy Kazumy, creado por Luis');
+
+    kazumy.ComponentSelect(
+      [
+        'Manuel',
+        'Desarrollador',
+        'Facebook',
+        'Mirar Películas'
+      ]
+    )
+
+    alert($('select-k').html())
 
   })
 </script>

@@ -36,3 +36,25 @@ Kazumy.prototype.dataView = function(id, arrayData) {
 
   $(id).text(content);
 }
+
+Kazumy.prototype.ComponentSelect = function(data) {
+  class SelectK extends HTMLElement {
+    constructor() {
+      super();
+      var shadow = this.attachShadow({mode: 'open'});
+
+      var select = document.createElement('select');
+      select.id = "K";
+      for (var i = 0; i < data.length; i++) {
+        var option = document.createElement('option');
+        option.value = i;
+        option.innerText = data[i];
+        select.add(option);
+      }
+      shadow.appendChild(select);
+
+    }
+
+  }
+  window.customElements.define('select-k', SelectK);
+}
